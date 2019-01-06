@@ -1,0 +1,119 @@
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1{
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 4.0rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+}
+p {
+  margin-top: 0; }
+
+button{
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+button:hover,
+button:focus{
+  color: #333;
+  border-color: #888;
+  outline: 0;
+}
+button{
+  margin-bottom: 1rem;
+}
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1;
+}
+
+.speedometer{
+  fill: black;
+}
+
+.red-cover .cover-color{
+  fill: red;
+}
+
+.low .indicator{
+  -ms-transform: rotate(90deg) scale(0.7); /* IE 9 */
+  -webkit-transform: rotate(90deg) scale(0.7); /* Safari 3-8 */
+  transform: rotate(90deg) scale(0.7);
+
+  -ms-transform-origin: 335em -15em; /* IE 9 */
+  -webkit-transform-origin: 335em -15em; /* Safari 3-8 */
+  transform-origin: 335em -15em;
+}
+
+@keyframes moveCover {
+  20%{
+    transform: translate(-18em, -20em);
+  }
+  40%{
+    transform: translate(0, 0);
+  }
+  70%{
+    transform: translate(18em, -20em);
+  }
+}
+.drive .cover-plate{
+  animation: moveCover 12s infinite;
+}
+
+@keyframes moveIndicator {
+  20%{
+    transform: rotate(5deg);
+  }
+  60%{
+    transform: rotate(-5deg);
+  }
+}
+.drive .indicator{
+  animation: moveIndicator 3s infinite;
+  transform-origin: 335em -15em;
+  fill: red;
+}
+
+@keyframes blinkLight {
+  60%{
+    fill: red;
+  }
+  20%{
+    fill: black;
+  }
+}
+.drive .blinking_light{
+  animation: blinkLight 3s infinite;
+}
+.drive .light{
+  fill: red;
+}
